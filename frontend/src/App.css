@@ -1,167 +1,129 @@
 * {
     font-family: Arial, Helvetica, sans-serif;
+    margin: 0;
+    padding: 0;
 }
 
-.contact {
-    border-width: 2px;
-    border-style: solid;
-    border-radius: 5px;
-    border-color: black;
-    padding: 5px;
-    margin: 5px;
-    cursor: pointer;
-
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-}
-.contact:hover {
-    background-color: #E0E0E0;
-}
-.contact > .title {
-    display: flex;
-    flex-direction: row;
-    align-items: center;
-    justify-content: space-between;
-    width: 100%;
-}
-.contact > .title > h3 {
-    margin: 0px;
-    text-align: center;
+body {
+    background-color: #f4f4f9;
 }
 
 .button {
     border: none;
     color: white;
-    padding: 5px 10px;
+    padding: 8px 16px;
     text-align: center;
     text-decoration: none;
     display: inline-block;
-    font-size: 12px;
+    font-size: 14px;
     border-radius: 5px;
     cursor: pointer;
+    transition: background-color 0.3s ease;
 }
 
 .green {
     background-color: #4CAF50;
 }
 .green:hover {
-    background-color: #46a049;
+    background-color: #45a049;
 }
 .red {
     background-color: #f44336;
 }
 .red:hover {
-    background-color: #da190b;
+    background-color: #e62e00;
 }
 
 .page {
     height: 100vh;
-    max-height: 100vh;
-    width: 100vw;
-    max-width: 100vw;
+    width: 100%;
     display: flex;
     flex-direction: column;
     align-items: center;
+    justify-content: flex-start;
+    padding: 20px;
     overflow-y: auto;
 }
+
 .page > p {
     color: gray;
-}
-
-.contact-list {
-    border-width: 2px;
-    border-style: solid;
-    border-color: black;
-    padding: 5px;
-
-    border-radius: 5px;
-    margin-bottom: 15px;
-    
-    box-shadow: 0px 0px 5px 0px rgba(0,0,0,0.75);
-}
-
-.contact-list > h2 {
-    text-align: center;
-    margin-left: auto;
-    margin-right: auto;
-    width: 400px;
-}
-
-.new-contact {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-}
-
-.new-contact > input {
-    margin-bottom: 8px;
-}
-
-.phone-list {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-}
-.phone-list > table {
     margin-top: 10px;
-}
-.phone-list > table > thead > tr > th {
-    padding: 5px;
-}
-.phone-list > table > tbody > tr > td {
-    padding: 5px;
+    font-size: 16px;
 }
 
-.phone-list > table {
-    font-family: Arial, Helvetica, sans-serif;
-    border-collapse: collapse;
+.customer-list, .item-list, .order-list {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
     width: 100%;
+    max-width: 1000px;
 }
 
-.phone-list > table td, .phone-list > table th {
-    border: 1px solid #b1b1b1;
-    padding: 8px;
+.customer-list table, .item-list table, .order-list table {
+    margin-top: 20px;
+    width: 100%;
+    border-collapse: collapse;
 }
 
-.phone-list > table th {
-    padding-top: 12px;
-    padding-bottom: 12px;
-    text-align: left;
+.customer-list th, .item-list th, .order-list th,
+.customer-list td, .item-list td, .order-list td {
+    border: 1px solid #ddd;
+    padding: 12px 15px;
+    text-align: center;
+    vertical-align: middle;
 }
 
-.new-phone {
+.customer-list th, .item-list th, .order-list th {
+    background-color: #f1f1f1;
+    color: #555;
+    font-weight: bold;
+}
+
+.customer-list td, .item-list td, .order-list td {
+    background-color: white;
+    color: #333;
+}
+
+.customer-list tr:hover, .item-list tr:hover, .order-list tr:hover {
+    background-color: #f9f9f9;
+    cursor: pointer;
+}
+
+.new-customer, .new-item, .new-order {
     display: flex;
     flex-direction: row;
     align-items: center;
-}
-
-.new-phone > input {
-    margin-right: 5px;
+    margin-top: 20px;
     width: 100%;
+    max-width: 600px;
+    justify-content: space-between;
 }
 
-.stats > p {
-    color: gray;
-    cursor: pointer;
-    text-align: center;
-}
-.stats > p:hover {
-    color: black;
-}
-
-.stats-container {
-    border-width: 2px;
-    border-style: solid;
-    border-color: black;
-    padding: 5px;
-
+.new-customer input, .new-item input, .new-order input {
+    margin-right: 10px;
+    width: 100%;
+    padding: 8px;
+    font-size: 14px;
     border-radius: 5px;
-    margin-bottom: 15px;
-    
-    box-shadow: 0px 0px 5px 0px rgba(0,0,0,0.75);
-    text-align: center;
+    border: 1px solid #ddd;
+}
 
-    padding-left: 15px;
-    padding-right: 15px;
+.new-customer input:focus, .new-item input:focus, .new-order input:focus {
+    outline: none;
+    border-color: #4CAF50;
+}
+
+.new-customer button, .new-item button, .new-order button {
+    padding: 10px 20px;
+    font-size: 14px;
+    border-radius: 5px;
+    cursor: pointer;
+    background-color: #4CAF50;
+    color: white;
+    border: none;
+    transition: background-color 0.3s ease;
+}
+
+.new-customer button:hover, .new-item button:hover, .new-order button:hover {
+    background-color: #45a049;
 }

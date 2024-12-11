@@ -25,9 +25,9 @@ app.get("/", (req, res) => {
   res.json({ message: "Welcome to bezkoder application." });
 });
 
-require("./routes/contacts.routes")(app);
-require("./routes/phones.routes")(app);
-require("./routes/stats.routes")(app);
+require("./routes/items.routes")(app);
+require("./routes/customers.routes")(app);
+require("./routes/orders.routes")(app);
 
 // set port, listen for requests
 const PORT = 5000;
