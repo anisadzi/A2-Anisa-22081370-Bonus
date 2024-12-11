@@ -427,3 +427,34 @@ Features:
 - Save Button: Allow the user to save the changes on item name and/or item price
 - Cancel Button: Allow the user to cancel the changes on item name and/or item price
 
+---
+
+### Order Capture
+
+![order capture](https://github.com/user-attachments/assets/71ef3f4f-1f41-4b8e-bf4f-3950aeddca12)
+
+![order edit](https://github.com/user-attachments/assets/9f62ba9f-4613-42df-865f-8e413a55ae01)
+
+- Input fields: There are three input fields for this table
+   - Order Date: A date input field for ordes in dd/mm/yyyy format.
+   - Customer ID: A text input field to add the ID of the customer.
+   - Item ID: A text input field to add the ID of the item 
+- Create Order Button: A green button labeled "Create Order" allows the user to add a new order to the system.
+- Order Table: The table lists several orders with the following columns:
+   - Order ID: A unique identifier for each order.
+   - Order Date: The date the order is made.
+   - Customer ID: The ID of the customer on the order.
+   - Item ID: The ID of the item on the order.
+- Edit/Delete Buttons: Next to each orders's detail, there are two buttons for each order:
+   - Edit (Green): Allows the user to edit order details.
+   - Delete (Red): Allows the user to delete an order record from the system.
+- Save Button: Allow the user to save the changes on the order date, customer ID, and/or item ID.
+- Cancel Button: Allow the user to cancel the changes on the order date, customer ID, and/or item ID.
+
+---
+
+# Flow
+
+- User create a new customer. The system will create a new customer with customer ID
+- User add a new item. The system will create a new item with item ID
+- User can make order on a date with a specific customer by entering the customer's ID and a specific item by entering the item's ID on the input field.
